@@ -94,4 +94,59 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+    @Override
+    public String toString() {
+       String jobPrint = System.lineSeparator();
+
+       //ID
+       jobPrint += "ID: ";
+       if(id == 0){
+           jobPrint += "Data not available" + System.lineSeparator();
+       } else {
+           jobPrint += id + System.lineSeparator();
+       }
+
+       //Name
+        jobPrint += "Name: ";
+        if(name.isEmpty()){
+            jobPrint += "Data not available" + System.lineSeparator();
+        } else {
+            jobPrint += name + System.lineSeparator();
+        }
+
+        //Employer
+        jobPrint += "Employer: ";
+        if(employer.getValue().isEmpty()){
+            jobPrint += "Data not available" + System.lineSeparator();
+        } else {
+            jobPrint += employer + System.lineSeparator();
+        }
+
+        //Location
+        jobPrint += "Location: ";
+        if(location.getValue().isEmpty()){
+            jobPrint += "Data not available" + System.lineSeparator();
+        } else {
+            jobPrint += location + System.lineSeparator();
+        }
+
+        //Position type
+        jobPrint += "Position Type: ";
+        if(positionType.getValue().isEmpty()){
+            jobPrint += "Data not available" + System.lineSeparator();
+        } else{
+            jobPrint += positionType + System.lineSeparator();
+        }
+
+        //Core Competency
+        jobPrint += "Core Competency: ";
+        if(coreCompetency.getValue().isEmpty()){
+            jobPrint += "Data not available" + System.lineSeparator();
+        } else {
+            jobPrint += coreCompetency + System.lineSeparator();
+        }
+
+        return jobPrint;
+    }
 }
