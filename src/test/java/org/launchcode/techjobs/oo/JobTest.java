@@ -26,10 +26,10 @@ public class JobTest {
 
     //TESTING VALUES
     assertEquals("Product tester", job.getName());
-    assertEquals("ACME", job.getEmployer().toString());
-    assertEquals("Desert", job.getLocation().toString());
-    assertEquals("Quality control", job.getPositionType().toString());
-    assertEquals("Persistence", job.getCoreCompetency().toString());
+    assertEquals("ACME", job.getEmployer().getValue());
+    assertEquals("Desert", job.getLocation().getValue());
+    assertEquals("Quality control", job.getPositionType().getValue());
+    assertEquals("Persistence", job.getCoreCompetency().getValue());
     //TESTING CLASSES
     assertTrue(job instanceof Job);
     assertTrue(job.getEmployer() instanceof Employer);
